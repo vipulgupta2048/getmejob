@@ -1,0 +1,136 @@
+Final review at 8 pm
+Make issue 
+Make PR
+
+
+https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/index.html
+
+**Command lines are faster, hassle-free way of deploying software just as you want it with complete control of the user’s system.**
+ 
+I think, there lies the use, the necessity for having a command line tool for our favorite data validation and monitoring tool for Spiders that is Spidermon. A CLI has something for everyone. A developer wanting to configure say, his/her Sentry or Slack actions quickly, but not want to go deep into the code. Maintainers who want to add new features and test them quickly.  
+ 
+In my plans for Spidermon, I aim to build a simple, well documented, feature-rich command line interface that developers would actually enjoy using and experimenting with their spiders. Helping developers and users alike to speed through setups of the spidermon library and its features. 
+
+**Redefining the experience** of setting up spidermon in either pre-built spiders or in new projects. Providing **flexibility**, **scalability** and resulting in higher **production-ready, tested spiders** with **monitoring tools activated** coming out of development. I.
+
+_I think this project is extremely beneficial for the growth of Spidermon as well as the entire ScrapingHub community._
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resume
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mind map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Able to run on all platforms (Windows, Linux, MacOS)
+Able to setup spidermon and all its tools in already well-defined projects.
+Slack Action
+- Variable names picked up directly from source code and docs, show them that you read the docs.
+WHAT HAPPENS If default (mail)
+EXACTLY LIKE SOURCE CODE (mail)
+EXACTLY LIKE DOCS (mail)
+Search for word setup replace with easy-setup
+Helpful tutorial messages 
+- MAKE PR on WARNING OF INSTALLATIONS
+Wrong command messages
+A Tutorial that I will be building implementing everything with Spider mon
+ALL OF THESE WORK LIKE CRUD applications. REMember to mention (mail)
+Solving all issues of Spidermon.
+All Include testing that could be done by Spidermon in Scrapy CLI to increase reach. 
+MAKE AN ISSUE DESCRIBING ALL THIS 
+MAKE A PULL REQUEST WITH A COMPLETE WIREFRAME
+Fill in missing documentation 
+Missing Features 
+
+
+Least user input and more work done in pre-built spiders.
+Multi platform support - (Bash, Fish, ZSH) (Windows, MacOS, Linux)
+
+
+Went through the Scrapy Issues and CLI 
+Research 
+https://github.com/wf94/BookSpider/wiki/How-scrapy-works
+
+This CLI should be used by anyone that want to configure Spidermon quickly. I suggest the use of click to create the command.
+Ask the user which built-in monitors they want to enable (and request the necessary settings):
+https://github.com/scrapinghub/spidermon/blob/master/spidermon/contrib/scrapy/monitors.py
+Ask the user which built-in actions they want to enable (and request the necessary settings):
+https://github.com/scrapinghub/spidermon/tree/master/spidermon/contrib/actions
+Ask the user if they want item validation (options JSON Schema or schematics).
+In the end, a new monitors.py file should be created and project settings.py needs to be updated with the settings. If item validation was chosen, create an empty validators.py file or create a templa JSON Schema.

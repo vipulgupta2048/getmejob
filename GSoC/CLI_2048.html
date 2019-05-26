@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/index.html -->
+<html lang="en" class="gr__atlas_mindmup_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+    <title>CLI_2048</title>
+		<link href="./CLI_2048_files/mindmup-icons.css" rel="stylesheet">
+		<link href="./CLI_2048_files/mapjs.css" rel="stylesheet">
+		<link href="./CLI_2048_files/fonts.css" rel="stylesheet">
+
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="CLI_scrapingHub_featurelist_Vipul Gupta">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="CLI_2048">
+<meta itemprop="description" content="CLI_scrapingHub_featurelist_Vipul Gupta">
+<meta itemprop="image" content="https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/thumb.png">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/thumb.png">
+<meta name="twitter:site" content="@mindmup">
+<meta name="twitter:url" content="https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/index.html">
+<meta name="twitter:description" content="CLI_scrapingHub_featurelist_Vipul Gupta">
+<meta name="twitter:title" content="CLI_2048">
+<meta name="twitter:creator" content="@mindmup">
+
+
+<!-- Open Graph data -->
+
+<meta property="fb:app_id" content="621299297886954">
+<meta property="article:publisher" content="https://www.facebook.com/mindmupapp">
+<meta property="og:site_name" content="MindMup Atlas">
+<meta property="og:title" content="CLI_2048">
+<meta property="og:description" content="CLI_scrapingHub_featurelist_Vipul Gupta">
+<meta property="og:image" content="https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/thumb.png">
+<meta property="og:url" content="https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/index.html">
+<meta property="og:type" content="article">
+	 <style>
+			html, body {
+				height: 100%;
+				-webkit-tap-highlight-color: transparent;
+			}
+			body.jsworks {
+				overflow:hidden;
+				margin:0;
+				padding:0;
+			}
+			#container {
+				background-color: #FFFFFF;
+			}
+			body.jsworks #container {
+				overflow: hidden;
+				height: 100%;
+				width: 100%;
+				margin:0;
+				padding:0;
+				-webkit-tap-highlight-color: transparent;
+			}
+			body.jsworks #svgcontainer {
+				display: none;
+			}
+			#attachment-container {
+				width:100%;
+				height:100%;
+				min-height: 100%;
+				overflow: hidden;
+				background-color: #E0E0E0;
+			}
+			#attachment {
+				width :94%;
+				height: 95%;
+				width:calc(100% - 100px);
+				height:calc(100% - 100px);
+				margin: 30px;
+				padding: 20px;
+				border: 1px solid #777;
+				border-radius: 10px;
+				background-color: white;
+				overflow: auto;
+				color:#4F4F4F;
+			}
+
+			.close.attachment {
+				top: 12px;
+				right: 10px;
+				border: 1px solid #777;
+				position: fixed;
+				text-align: center;
+				height: 34px;
+				width:34px;
+				background-color: white;
+				border-radius: 18px;
+				font-weight: bold;
+				text-decoration: none;
+				z-index:999;
+				font-family: Arial,Helvetica,sans-serif;
+				font-size: 30px;
+				color:black;
+				box-shadow: 2px 2px 2px #777;
+			}
+			.img-thumb {
+				max-width: 400px;
+				max-height: 400px;
+			}
+			#attachment iframe {
+				width: calc(100% - 30px);
+				height: calc(100% - 30px);
+				border: 0;
+			}
+			.note {
+				white-space: pre-wrap;
+			}
+
+			.progress-line {
+				height: 2px;
+				display: inline-block;
+				background-color: #6FD0F6;
+				display: -webkit-flex;
+				display: flex;
+				width: 100%;
+			}
+			.progress-line:before {
+				margin: 0;
+				width: 100%;
+				height: 2px;
+				background-color: #22AAE0;
+				content: '';
+				-webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+				animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+			}
+			@-webkit-keyframes running-progress {
+				0% {
+					margin-left: 0px;
+					margin-right: 100%;
+				}
+				50% {
+					margin-left: 25%;
+					margin-right: 0%;
+				}
+				100% {
+					margin-left: 100%;
+					margin-right: 0;
+				}
+			}
+			@keyframes running-progress {
+				0% {
+					margin-left: 0px;
+					margin-right: 100%;
+				}
+				50% {
+					margin-left: 25%;
+					margin-right: 0%;
+				}
+				100% {
+					margin-left: 100%;
+					margin-right: 0;
+				}
+			}
+
+			.hidden .progress-line {
+				display: none;
+			}
+			.hidden .progress-line:before, .hidden .progress-line:after {
+				-webkit-animation: none;
+				animation: none;
+			}
+
+			modalcontainer {
+				top: 0;
+				left: 0;
+				width: 100%;
+				position: absolute;
+				height: 100%;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-align-items: center;
+				align-items: center;
+				background-color:  white;
+				z-index: 9999;
+			}
+			body:not(.jsworks) modalcontainer {
+				display: none;
+			}
+			modaldialog {
+				height: 512px;
+				width: 512px;
+				background-color: white;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				flex-direction: column;
+				-webkit-align-items: stretch;
+				align-items: stretch;
+				box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+				border-radius: 2px;
+				color: #757575;
+				font-family: Helvetica, Arial, sans-serif;
+			}
+			modaldialog.small {
+				height: 256px;
+			}
+			modaldialog.medium {
+				height: 384px;
+			}
+			modalcontent {
+				padding: 16px;
+				-webkit-flex-grow: 1;
+				flex-grow: 1;
+			}
+			modalcontent div.progress-container {
+				margin-top: 100px;
+			}
+			.fadeInOut {
+			    opacity: 1;
+			    z-index: 1;
+			    transition: opacity 0.6s, z-index 0.6s;
+			}
+			.fadeInOut.hidden {
+			    opacity: 0;
+			    z-index: -1;
+			}
+			:not(.fadeInOut).hidden {
+				display: none;
+			}
+			modaltitle {
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				color: #22AAE0;
+				text-align: left;
+				padding: 16px;
+				-ms-user-select: none;
+				-webkit-user-select: none;
+				-moz-user-select:none;
+				user-select: none;
+			}
+			.mapjs-link-hit {
+				display: none;
+			}
+			NotoFontLoader {
+			  position: absolute;
+			  visibility: hidden;
+			  font-family: NotoSans;
+			}
+
+			NotoFontLoader .bold {
+			  font-weight: bold;
+			}
+	</style>
+<style id="themeCSS" type="text/css">body:not(.noTransition) .mapjs-node:not(.noTransition):not(.dragging), body:not(.noTransition) [data-mapjs-role="svg-container"] :not(.noTransition), body:not(.noTransition) [data-mapjs-role="svg-container"] :not(.noTransition) :not(.noTransition) { transition-property: transform, left, d, top, opacity; transition-duration: 400ms;}.mapjs-node{border-radius:10px;background-color:#E0E0E0;border:1px solid #707070;margin:-1px;box-shadow:2px 2px 2px rgba(7,7,7,0.4);text-align:center;color:#4F4F4F;font:normal normal bold 9pt/1.50 NotoSans, "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;}.mapjs-node .mapjs-decorations{position:absolute;font-size:16px;line-height:1;color:#ffffff;background-color:#22aae0;border-radius:12px;opacity:0.8;padding:2px;}.mapjs-node .mapjs-decorations a {padding:2px;color:#ffffff;background-color:#22aae0;border-radius:12px;}.mapjs-node .mapjs-decorations .mapjs-label{min-width:1em;font:normal normal bold 9pt/1.00 NotoSans, "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;border:1px solid #ffffff;border-radius:11px;padding:2px;}.mapjs-node.level_1{background-color:#22AAE0;}.mapjs-node.activated{border:3px dotted #22AAE0;margin:-3px;}.mapjs-node.level_1.activated{border:3px dotted #EEEEEE;margin:-3px;}.mapjs-node.selected{box-shadow:2px 2px 2px rgba(0,0,0,0.9);}.mapjs-node.collapsed{box-shadow:0px 1px 0px #888888,0px 3px 0px #FFFFFF,0px 4px 0px #888888,0px 6px 0px #FFFFFF,0px 7px 0px #888888;}.mapjs-node.collapsed.selected{box-shadow:0px 1px 0px #FFFFFF,0px 3px 0px #888888,0px 6px 0px #FFFFFF,0px 7px 0px #555555,0px 10px 0px #FFFFFF,0px 11px 0px #333333;}</style></head>
+<body class="jsworks" data-gr-c-s-loaded="true">
+<script>
+document.body.classList.add('jsworks');
+</script>
+<modalcontainer class="fadeInOut hidden" id="maploader">
+	<modaldialog>
+		<notofontloader>Browsers are <span class="bold">difficult</span></notofontloader>
+		<modaltitle>
+		Please wait, loading your map...
+		</modaltitle>
+		<div class="progress-line" data-mm-section="progress"></div>
+		<modalcontent>
+			<img src="./CLI_2048_files/thumb.png" class="img-thumb">
+		</modalcontent>
+	</modaldialog>
+</modalcontainer>
+		<div id="container" tabindex="1" data-drag-role="container" style="overflow: auto;"><div data-mapjs-role="stage" style="position: relative; min-width: 1074px; min-height: 506px; width: 1074px; height: 506px; transform-origin: left top; transform: translate3d(1407px, 597px, 0px);"><svg data-mapjs-role="svg-container" class="mapjs-draw-container" style="top:-597px; left:-1407px; width:2481px; height:1103px;" viewBox="-1407 -597 2481 1103"><g id="connector_1_2" data-mapjs-role="connector" style="width: 674px; height: 292px; transform: translate(-669px, -35px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M485,62Q485,358 274,231" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M485,62Q485,358 274,231" stroke-width="13"></path></g><g id="connector_1_3" data-mapjs-role="connector" style="width: 642px; height: 381.8px; transform: translate(-637px, -35px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M453,62Q453,425 242,347" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M453,62Q453,425 242,347" stroke-width="13"></path></g><g id="connector_1_4" data-mapjs-role="connector" style="width: 739px; height: 374px; transform: translate(-374px, -35px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M190,62Q190,431 399,331" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M190,62Q190,431 399,331" stroke-width="13"></path></g><g id="connector_6_11" data-mapjs-role="connector" style="width: 663px; height: 346.8px; transform: translate(-1357px, -280.8px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M510,304Q510,-32 335,68" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M510,304Q510,-32 335,68" stroke-width="13"></path></g><g id="connector_6_12" data-mapjs-role="connector" style="width: 541px; height: 85px; transform: translate(-1235px, -19px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M244,42Q244,54 213,54" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M244,42Q244,54 213,54" stroke-width="13"></path></g><g id="connector_6_13" data-mapjs-role="connector" style="width: 545px; height: 190.8px; transform: translate(-1239px, -124.8px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M392,148Q392,-34 217,24" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M392,148Q392,-34 217,24" stroke-width="13"></path></g><g id="connector_6_14" data-mapjs-role="connector" style="width: 542px; height: 122.8px; transform: translate(-1236px, -56.8px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M389,80Q389,-18 214,24" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M389,80Q389,-18 214,24" stroke-width="13"></path></g><g id="connector_6_15" data-mapjs-role="connector" style="width: 542px; height: 148.2px; transform: translate(-1236px, -19px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M389,42Q389,180 214,122" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M389,42Q389,180 214,122" stroke-width="13"></path></g><g id="connector_6_16" data-mapjs-role="connector" style="width: 646px; height: 389.2px; transform: translate(-1340px, -19px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M493,42Q493,411 318,311" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M493,42Q493,411 318,311" stroke-width="13"></path></g><g id="connector_19_21" data-mapjs-role="connector" style="width: 1037.8px; height: 128px; transform: translate(-951.8px, -395px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M508,64Q508,42 394,42" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M508,64Q508,42 394,42" stroke-width="13"></path></g><g id="connector_19_22" data-mapjs-role="connector" style="width: 971.4px; height: 126px; transform: translate(-454px, -393px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M530,62Q530,59 651,59" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M530,62Q530,59 651,59" stroke-width="13"></path></g><g id="connector_19_23" data-mapjs-role="connector" style="width: 774px; height: 280.2px; transform: translate(-454px, -547.2px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M270,216Q270,-46 560,32" stroke-width="1" stroke-dasharray="8, 8" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M270,216Q270,-46 560,32" stroke-width="13"></path></g><g id="connector_24_26" data-mapjs-role="connector" style="width: 708.734px; height: 234.643px; transform: translate(258px, -25px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M172,50Q172,278 400,200" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M172,50Q172,278 400,200" stroke-width="13"></path></g><g id="connector_24_27" data-mapjs-role="connector" style="width: 730.594px; height: 139.436px; transform: translate(258px, -62.4356px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M333,87Q333,41 406,41" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M333,87Q333,41 406,41" stroke-width="13"></path></g><g id="connector_24_30" data-mapjs-role="connector" style="width: 765.687px; height: 254.67px; transform: translate(258px, -177.67px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M172,203Q172,-58 402,42" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M172,203Q172,-58 402,42" stroke-width="13"></path></g><g id="connector_24_32" data-mapjs-role="connector" style="width: 711.641px; height: 144.799px; transform: translate(258px, -25px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M172,50Q172,155 404,110" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M172,50Q172,155 404,110" stroke-width="13"></path></g><g id="connector_1_39" data-mapjs-role="connector" style="width: 667px; height: 271px; transform: translate(-374px, -35px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M190,62Q190,337 399,219" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M190,62Q190,337 399,219" stroke-width="13"></path></g><g id="connector_38_40" data-mapjs-role="connector" style="width: 619.42px; height: 72.161px; transform: translate(-504.195px, -176.8px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M189,38Q189,33 385,33" stroke-width="1" stroke-dasharray="8, 8" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M189,38Q189,33 385,33" stroke-width="13"></path></g><g id="connector_6_48" data-mapjs-role="connector" style="width: 553px; height: 216.2px; transform: translate(-1247px, -19px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M400,42Q400,248 225,190" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M400,42Q400,248 225,190" stroke-width="13"></path></g><g id="connector_19_52" data-mapjs-role="connector" style="width: 907.4px; height: 258px; transform: translate(-821.4px, -525px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M637,194Q637,-58 257,42" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M637,194Q637,-58 257,42" stroke-width="13"></path></g><g id="connector_24_53" data-mapjs-role="connector" style="width: 759.6px; height: 342px; transform: translate(258px, -25px); stroke: rgb(112, 112, 112);"><path class="mapjs-connector" d="M172,50Q172,399 397,299" stroke-width="1" stroke-dasharray="" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M172,50Q172,399 397,299" stroke-width="13"></path></g><g id="link_1_6" data-mapjs-role="link" style="width: 1006px; height: 124px; transform: translate(-1001px, -35px); stroke: rgb(112, 112, 112);"><path class="mapjs-link" d="M627,62L307,58" stroke-width="1" stroke-dasharray="" stroke-linecap="square" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M627,62L307,58" stroke-width="13"></path><path class="mapjs-arrow" d="M320,63L307,58L320,53Z" fill="#707070" stroke-width="1"></path></g><g id="link_1_19" data-mapjs-role="link" style="width: 540px; height: 482px; transform: translate(-454px, -393px); stroke: rgb(112, 112, 112);"><path class="mapjs-link" d="M270,358L270,124" stroke-width="1" stroke-dasharray="" stroke-linecap="square" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M270,358L270,124" stroke-width="13"></path><path class="mapjs-arrow" d="M265,137L270,124L275,137Z" fill="#707070" stroke-width="1"></path></g><g id="link_1_24" data-mapjs-role="link" style="width: 975px; height: 124px; transform: translate(-374px, -35px); stroke: rgb(112, 112, 112);"><path class="mapjs-link" d="M379,62L632,60" stroke-width="1" stroke-dasharray="" stroke-linecap="square" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M379,62L632,60" stroke-width="13"></path><path class="mapjs-arrow" d="M619,55L632,60L619,65Z" fill="#707070" stroke-width="1"></path></g><g id="link_1_43" data-mapjs-role="link" style="width: 379px; height: 490.983px; transform: translate(-374px, -35px); stroke: rgb(112, 112, 112);"><path class="mapjs-link" d="M190,124L181,426" stroke-width="1" stroke-dasharray="" stroke-linecap="square" fill="transparent"></path><path class="mapjs-link-hit noTransition" d="M190,124L181,426" stroke-width="13"></path><path class="mapjs-arrow" d="M186,413L181,426L176,413Z" fill="#707070" stroke-width="1"></path></g></svg><div data-mapjs-role="reorder-bounds" class="mapjs-reorder-bounds" style="display: none; position: absolute;"></div><div id="node_1" tabindex="0" data-mapjs-role="node" class="mapjs-node level_1 default selected activated" style="display: block; opacity: 1; position: absolute; top: -35px; left: -374px; min-width: 377px; min-height: 122px; font-size: 11.25pt; text-align: center; border-radius: 10px; color: rgb(255, 255, 255); background-color: rgb(128, 0, 0);"><span data-mapjs-role="title" style="width: 367px; margin: 5px; max-width: 367px;">~$ spidermon [command] [--options] arguments<br>1) ASCII Art,<br>2) Usage instructions<br>3) Commands,<br>4) General Options</span><div class="resize-node"></div></div><div id="node_2" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 137px; left: -669px; min-width: 272px; min-height: 116px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 262px; margin: 5px; max-width: 262px;">~$ spidermon --status<br><br>- Status of Activated Monitors<br>- Status of Activated Actions<br>- Status of Activated validators<br>- Anything that could be displayed as status</span><div class="resize-node"></div></div><div id="node_3" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 279.8px; left: -637px; min-width: 240px; min-height: 63px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 230px; margin: 5px; max-width: 230px;">~$ spidermon --version<br>To check version of Spidermon installation on system</span><div class="resize-node"></div></div><div id="node_4" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 254px; left: 25px; min-width: 338px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 328px; margin: 5px; max-width: 328px;">~$ spidermon --configure<br>Opens up a menu that could be used to activate/deactivate any actions/monitors/validators. Like a control center.&nbsp;(Experimental)</span><div class="resize-node"></div></div><div id="node_6" tabindex="0" data-mapjs-role="node" class="mapjs-node level_1 default" style="display: block; opacity: 1; position: absolute; top: -19px; left: -1001px; min-width: 305px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);"><span data-mapjs-role="title" style="width: 295px; margin: 5px; max-width: 295px;">~$ spidermon action<br><br>1) Activated after monitor suite finishes,<br>2) Check if monitors.py is present, if not create</span><div class="resize-node"></div></div><div id="node_11" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -280.8px; left: -1357px; min-width: 333px; min-height: 134px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 323px; margin: 5px; max-width: 323px;">~$ spidermon action --slack<br><br>0) Check if the relevant package is installed<br>1) Configure action by the input of relevant data storing them in settings.py<br>2) Add/Update action in monitors.py<br>3) Test action after setup is complete (New Feature)</span><div class="resize-node"></div></div><div id="node_12" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 11.2px; left: -1235px; min-width: 211px; min-height: 46px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 201px; margin: 5px; max-width: 201px;">~$ spidermon action --sentry<br>Same instructions/steps as above</span><div class="resize-node"></div></div><div id="node_13" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -124.8px; left: -1239px; min-width: 215px; min-height: 46px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 205px; margin: 5px; max-width: 205px;">~$ spidermon action --email<br>Same instructions/steps as above</span><div class="resize-node"></div></div><div id="node_14" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -56.8px; left: -1236px; min-width: 212px; min-height: 46px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 202px; margin: 5px; max-width: 202px;">~$ spidermon action --job-tags<br>Same instructions/steps as above</span><div class="resize-node"></div></div><div id="node_15" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 79.2px; left: -1236px; min-width: 212px; min-height: 46px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 202px; margin: 5px; max-width: 202px;">~$ spidermon action --file-report<br>Same instructions/steps as above</span><div class="resize-node"></div></div><div id="node_16" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 215.2px; left: -1340px; min-width: 316px; min-height: 151px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 306px; margin: 5px; max-width: 306px;">~$ spidermon action --custom<br><br>Create a template for getting the user started on their own custom action like scrapy genspider<br><br>create a class that inherits from&nbsp;spidermon.core.actions.Action&nbsp;and implement the&nbsp;run_action&nbsp;method.</span><div class="resize-node"></div></div><div id="node_19" tabindex="0" data-mapjs-role="node" class="mapjs-node level_1 default" style="display: block; opacity: 1; position: absolute; top: -393px; left: -454px; min-width: 538px; min-height: 122px; font-size: 11.25pt; text-align: center; border-radius: 10px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);"><span data-mapjs-role="title" style="width: 528px; margin: 5px; max-width: 528px;">~$ spidermon validate<br>1) Add/Update item validation feature in settings.py<br>2) Add/Update Spidermon validation model(s)<br>3) Add/Update Spidermon validation schema(s) if any<br>4) Add/Update other settings</span><div class="resize-node"></div></div><div id="node_21" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -395px; left: -951.8px; min-width: 392px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 382px; margin: 5px; max-width: 382px;">~$ spidermon validate --schematics<br><br>1) Check if Schematics is installed.<br>2) Create new validators.py file, where models can be defined.</span><div class="resize-node"></div></div><div id="node_22" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -375.4px; left: 197.4px; min-width: 318px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 308px; margin: 5px; max-width: 308px;">~$ spidermon validate --json-schema<br><br>1) Check if jsonschema is installed<br>2) New JSON schema template created in project</span><div class="resize-node"></div></div><div id="node_23" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -547.2px; left: 106px; min-width: 212px; min-height: 63px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 202px; margin: 5px; max-width: 202px;">~$ spidermon validate --cerebrus<br>(Experimental)<br>Will be added later, if completed</span><div class="resize-node"></div></div><div id="node_24" tabindex="0" data-mapjs-role="node" class="mapjs-node level_1 default" style="display: block; opacity: 1; position: absolute; top: -25px; left: 258px; min-width: 341px; min-height: 98px; text-align: center; border-radius: 10px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);"><span data-mapjs-role="title" style="width: 331px; margin: 5px; max-width: 331px;">~$ spidermon monitor<br><br>1. Add/Update list of monitor suites in settings.py,<br>2. Create/update new monitors.py file,<br>3. Modify on every new monitor easy-setup</span><div class="resize-node"></div></div><div id="node_26" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 142.643px; left: 657.734px; min-width: 307px; min-height: 63px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 297px; margin: 5px; max-width: 297px;">~$ spidermon monitors --extracted-items X<br><br>Where X is the least no. of items expected</span><div class="resize-node"></div></div><div id="node_27" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -62.4356px; left: 663.594px; min-width: 323px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 313px; margin: 5px; max-width: 313px;">~$ spidermon monitor --finish-reason X<br><br>Monitor if job finished with X expected_reasons, inline with finished_reasons</span><div class="resize-node"></div></div><div id="node_30" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -177.67px; left: 659.687px; min-width: 362px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 352px; margin: 5px; max-width: 352px;">~$ spidermon monitor --unwanted-http X<br><br>Monitor job for maximum no. of unwanted HTTP codes.<br>X being a dict of max_errors that aren't to be exceeded.</span><div class="resize-node"></div></div><div id="node_32" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 52.7988px; left: 661.641px; min-width: 306px; min-height: 63px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 296px; margin: 5px; max-width: 296px;">~$ spidermon monitor --errors-count X<br><br>Monitor X being errors_threshold expected</span><div class="resize-node"></div></div><div id="node_38" tabindex="0" data-mapjs-role="node" class="mapjs-node level_1 default" style="display: block; opacity: 1; position: absolute; top: -171.639px; left: -504.195px; min-width: 197px; min-height: 63px; text-align: center; border-radius: 10px; color: rgb(255, 255, 255); background-color: rgb(51, 102, 255);"><span data-mapjs-role="title" style="width: 187px; margin: 5px; max-width: 187px;">Made by Vipul Gupta, for ScrapingHub<br>GSoC Project Proposal 2019</span><div class="resize-node"></div></div><div id="node_39" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 134px; left: 25px; min-width: 266px; min-height: 98px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 256px; margin: 5px; max-width: 256px;">~$ spidermon --bench<br>(Experimental)<br>Just like Scrapy bench, Spidermon can have performance testing included to check time taken by all features</span><div class="resize-node"></div></div><div id="node_40" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -176.8px; left: -119.175px; min-width: 232.4px; min-height: 63px; text-align: center; border-radius: 10px; color: rgb(255, 255, 255); background-color: rgb(51, 102, 255);"><span data-mapjs-role="title" style="width: 222.4px; margin: 5px; max-width: 222.4px;">Proposed Feature List of<br>Spidermon CLI<br>(In reference to Source Code + Docs)</span><div class="resize-node"></div></div><div id="node_43" tabindex="0" data-mapjs-role="node" class="mapjs-node level_1 default" style="display: block; opacity: 1; position: absolute; top: 390.983px; left: -307.418px; min-width: 225px; min-height: 63px; text-align: center; border-radius: 10px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);"><span data-mapjs-role="title" style="width: 215px; margin: 5px; max-width: 215px;">~$ spidermon setup<br>1) Check Spidermon installation<br>2) Add reference in settings.py</span><div class="resize-node"></div></div><div id="node_48" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 147.2px; left: -1247px; min-width: 223px; min-height: 46px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 213px; margin: 5px; max-width: 213px;">~$ spidermon action --s3-file-report<br>Same instructions/steps as above</span><div class="resize-node"></div></div><div id="node_52" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: -525px; left: -821.4px; min-width: 255px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 245px; margin: 5px; max-width: 245px;">~$ spidermon validate --custom<br><br>Create a template for getting the user started on their own custom validator</span><div class="resize-node"></div></div><div id="node_53" tabindex="0" data-mapjs-role="node" class="mapjs-node level_2 default" style="display: block; opacity: 1; position: absolute; top: 232px; left: 654.6px; min-width: 361px; min-height: 81px; text-align: center; border-radius: 10px; color: rgb(79, 79, 79); background-color: rgb(224, 224, 224);"><span data-mapjs-role="title" style="width: 351px; margin: 5px; max-width: 351px;">~$ spidermon monitors --custom<br><br>Create a template for getting the user started on their own custom monitor like scrapy's genspider command</span><div class="resize-node"></div></div></div></div>
+		<div id="attachment-container" class="attachment" style="display: none;">
+			<div id="attachment" class="attachment" style="display: none;"></div>
+		</div>
+		<a href="https://atlas.mindmup.com/2019/04/b8c753505ad711e9904a63e5aaa82b2a/cli2048/index.html#" class="close attachment" style="display: none;">×</a>
+
+<script type="application/json" id="map-contents">
+{&quot;formatVersion&quot;:3,&quot;id&quot;:&quot;root&quot;,&quot;ideas&quot;:{&quot;1&quot;:{&quot;title&quot;:&quot;~$ spidermon [command] [--options] arguments\n1) ASCII Art,\n2) Usage instructions \n3) Commands,\n4) General Options&quot;,&quot;id&quot;:1,&quot;attr&quot;:{&quot;position&quot;:[-374,-35,1],&quot;style&quot;:{&quot;backgroundColor&quot;:&quot;#800000&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#FFFFFF&quot;},&quot;fontMultiplier&quot;:1.25,&quot;width&quot;:367}},&quot;ideas&quot;:{&quot;1&quot;:{&quot;title&quot;:&quot;~$ spidermon --bench\n(Experimental)\nJust like Scrapy bench, Spidermon can have performance testing included to check time taken by all features&quot;,&quot;id&quot;:39,&quot;attr&quot;:{&quot;storyboard-scenes&quot;:[{&quot;storyboards&quot;:{&quot;Storyboard 1&quot;:1}}],&quot;position&quot;:[224.609375,171.8749999999999,17],&quot;style&quot;:{&quot;width&quot;:256}}},&quot;11&quot;:{&quot;title&quot;:&quot;~$ spidermon --configure\nOpens up a menu that could be used to activate/deactivate any actions/monitors/validators. Like a control center. (Experimental)&quot;,&quot;id&quot;:4,&quot;ideas&quot;:{},&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:328},&quot;position&quot;:[352.5999755859375,289,20]}},&quot;-8.75&quot;:{&quot;title&quot;:&quot;~$ spidermon --status\n\n- Status of Activated Monitors \n- Status of Activated Actions\n- Status of Activated validators\n- Anything that could be displayed as status&quot;,&quot;id&quot;:2,&quot;attr&quot;:{&quot;position&quot;:[274.3999934196469,171.99999999999977,18],&quot;style&quot;:{&quot;width&quot;:262}}},&quot;-18.75&quot;:{&quot;title&quot;:&quot;~$ spidermon --version\nTo check version of Spidermon installation on system&quot;,&quot;id&quot;:3,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:230},&quot;position&quot;:[253,314.79998779296875,19]}}}},&quot;2&quot;:{&quot;title&quot;:&quot;~$ spidermon validate\n1) Add/Update item validation feature in settings.py\n2) Add/Update Spidermon validation model(s)\n3) Add/Update Spidermon validation schema(s) if any\n4) Add/Update other settings&quot;,&quot;id&quot;:19,&quot;attr&quot;:{&quot;position&quot;:[-454,-393,1],&quot;style&quot;:{&quot;fontMultiplier&quot;:1.25,&quot;text&quot;:{&quot;color&quot;:&quot;#FFFFFF&quot;},&quot;backgroundColor&quot;:&quot;#000000&quot;,&quot;width&quot;:528}},&quot;ideas&quot;:{&quot;0.5&quot;:{&quot;title&quot;:&quot;~$ spidermon validate --json-schema\n\n1) Check if jsonschema is installed\n2) New JSON schema template created in project&quot;,&quot;id&quot;:22,&quot;attr&quot;:{&quot;position&quot;:[651.3999938964844,17.599998474121094,19],&quot;style&quot;:{&quot;width&quot;:308}},&quot;ideas&quot;:{}},&quot;-0.25&quot;:{&quot;title&quot;:&quot;~$ spidermon validate --schematics\n\n1) Check if Schematics is installed.\n2) Create new validators.py file, where models can be defined. &quot;,&quot;id&quot;:21,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:382},&quot;position&quot;:[643.7999877929688,-2,14]},&quot;ideas&quot;:{}},&quot;0.25&quot;:{&quot;title&quot;:&quot;~$ spidermon validate --cerebrus\n(Experimental)\nWill be added later, if completed&quot;,&quot;id&quot;:23,&quot;attr&quot;:{&quot;parentConnector&quot;:{&quot;lineStyle&quot;:&quot;dashed&quot;},&quot;style&quot;:{&quot;width&quot;:202},&quot;position&quot;:[355.20001220703125,-154.20000076293945,18]}},&quot;-0.125&quot;:{&quot;title&quot;:&quot;~$ spidermon validate --custom\n\nCreate a template for getting the user started on their own custom validator&quot;,&quot;id&quot;:52,&quot;attr&quot;:{&quot;position&quot;:[650.3999938964844,-132,17],&quot;style&quot;:{&quot;width&quot;:245}}}}},&quot;3&quot;:{&quot;title&quot;:&quot;~$ spidermon action\n\n1) Activated after monitor suite finishes,\n2) Check if monitors.py is present, if not create  &quot;,&quot;id&quot;:6,&quot;ideas&quot;:{&quot;-10&quot;:{&quot;title&quot;:&quot;~$ spidermon action --slack\n\n0) Check if the relevant package is installed\n1) Configure action by the input of relevant data storing them in settings.py \n2) Add/Update action in monitors.py\n3) Test action after setup is complete (New Feature)&quot;,&quot;id&quot;:11,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:323},&quot;position&quot;:[196.4000015258789,-176.00001525878906,13]},&quot;ideas&quot;:{}},&quot;-20&quot;:{&quot;title&quot;:&quot;~$ spidermon action --sentry\nSame instructions/steps as above\n&quot;,&quot;id&quot;:12,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:201},&quot;position&quot;:[46,63,8]}},&quot;-15&quot;:{&quot;title&quot;:&quot;~$ spidermon action --email\nSame instructions/steps as above&quot;,&quot;id&quot;:13,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:205},&quot;position&quot;:[56,-70,9]}},&quot;-17.5&quot;:{&quot;title&quot;:&quot;~$ spidermon action --job-tags\nSame instructions/steps as above&quot;,&quot;id&quot;:14,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:202},&quot;position&quot;:[97,-47,10]}},&quot;-30&quot;:{&quot;title&quot;:&quot;~$ spidermon action --file-report\nSame instructions/steps as above\n&quot;,&quot;id&quot;:15,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:202},&quot;position&quot;:[137,103,11]},&quot;ideas&quot;:{}},&quot;-40&quot;:{&quot;title&quot;:&quot;~$ spidermon action --custom\n\nCreate a template for getting the user started on their own custom action like scrapy genspider\n\n create a class that inherits from spidermon.core.actions.Action and implement the run_action method.&quot;,&quot;id&quot;:16,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:306},&quot;position&quot;:[299,234.20001220703125,14]}},&quot;-35&quot;:{&quot;title&quot;:&quot;~$ spidermon action --s3-file-report\nSame instructions/steps as above&quot;,&quot;id&quot;:48,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:213}}}},&quot;attr&quot;:{&quot;position&quot;:[-1001.1750473380093,-19.799623444676854,1],&quot;style&quot;:{&quot;backgroundColor&quot;:&quot;#000000&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#FFFFFF&quot;},&quot;width&quot;:295}}},&quot;4&quot;:{&quot;title&quot;:&quot;~$ spidermon monitor\n\n1. Add/Update list of monitor suites in settings.py,\n2. Create/update new monitors.py file,\n3. Modify on every new monitor easy-setup&quot;,&quot;id&quot;:24,&quot;attr&quot;:{&quot;position&quot;:[258,-25,1],&quot;style&quot;:{&quot;width&quot;:331,&quot;backgroundColor&quot;:&quot;#000000&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#FFFFFF&quot;}}},&quot;ideas&quot;:{&quot;1&quot;:{&quot;title&quot;:&quot;~$ spidermon monitors --extracted-items X\n\nWhere X is the least no. of items expected\n&quot;,&quot;id&quot;:26,&quot;ideas&quot;:{},&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:297},&quot;position&quot;:[399.73436367511613,167.64256143569912,6]}},&quot;11&quot;:{&quot;title&quot;:&quot;~$ spidermon monitors --custom\n\nCreate a template for getting the user started on their own custom monitor like scrapy&#x27;s genspider command&quot;,&quot;id&quot;:53,&quot;attr&quot;:{&quot;position&quot;:[396.5999755859375,257,10],&quot;style&quot;:{&quot;width&quot;:351}}},&quot;0.5&quot;:{&quot;title&quot;:&quot;~$ spidermon monitor --finish-reason X\n\nMonitor if job finished with X expected_reasons, inline with finished_reasons&quot;,&quot;id&quot;:27,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:313},&quot;position&quot;:[405.59373867511613,-37.435563564300764,8]}},&quot;0.25&quot;:{&quot;title&quot;:&quot;~$ spidermon monitor --unwanted-http X\n\nMonitor job for maximum no. of unwanted HTTP codes.\nX being a dict of max_errors that aren&#x27;t to be exceeded.&quot;,&quot;id&quot;:30,&quot;attr&quot;:{&quot;position&quot;:[401.68748867511613,-152.66993856430076,9],&quot;style&quot;:{&quot;width&quot;:352}},&quot;ideas&quot;:{}},&quot;0.75&quot;:{&quot;title&quot;:&quot;~$ spidermon monitor --errors-count X\n\nMonitor X being errors_threshold expected&quot;,&quot;id&quot;:32,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:296},&quot;position&quot;:[403.64061367511613,77.79881143569912,7]}}}},&quot;5&quot;:{&quot;title&quot;:&quot;Made by Vipul Gupta, for ScrapingHub\nGSoC Project Proposal 2019&quot;,&quot;id&quot;:38,&quot;attr&quot;:{&quot;position&quot;:[-504.19531100988434,-171.63866628706478,1],&quot;style&quot;:{&quot;backgroundColor&quot;:&quot;#3366FF&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#FFFFFF&quot;},&quot;width&quot;:187}},&quot;ideas&quot;:{&quot;1&quot;:{&quot;title&quot;:&quot;Proposed Feature List of\n Spidermon CLI\n(In reference to Source Code + Docs)&quot;,&quot;attr&quot;:{&quot;style&quot;:{&quot;backgroundColor&quot;:&quot;#3366FF&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#FFFFFF&quot;},&quot;width&quot;:222.4},&quot;position&quot;:[385.02026367187455,-5.160957157611961,1],&quot;parentConnector&quot;:{&quot;lineStyle&quot;:&quot;dashed&quot;}},&quot;id&quot;:40}}},&quot;6&quot;:{&quot;title&quot;:&quot;~$ spidermon setup\n1) Check Spidermon installation\n2) Add reference in settings.py&quot;,&quot;id&quot;:43,&quot;attr&quot;:{&quot;style&quot;:{&quot;width&quot;:215,&quot;backgroundColor&quot;:&quot;#000000&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#FFFFFF&quot;}},&quot;position&quot;:[-307.417970985176,390.9833965748537,1]},&quot;ideas&quot;:{}}},&quot;title&quot;:&quot;~$ spidermon [command] [--options] arguments\n1) ASCII Art,\n2) Usage instructions \n3) Commands,\n4) General Options&quot;,&quot;links&quot;:[{&quot;ideaIdFrom&quot;:1,&quot;ideaIdTo&quot;:6,&quot;attr&quot;:{&quot;style&quot;:{&quot;color&quot;:&quot;#707070&quot;,&quot;lineStyle&quot;:&quot;solid&quot;,&quot;arrow&quot;:&quot;to&quot;}}},{&quot;ideaIdFrom&quot;:1,&quot;ideaIdTo&quot;:19,&quot;attr&quot;:{&quot;style&quot;:{&quot;color&quot;:&quot;#707070&quot;,&quot;lineStyle&quot;:&quot;solid&quot;,&quot;arrow&quot;:&quot;to&quot;}}},{&quot;ideaIdFrom&quot;:1,&quot;ideaIdTo&quot;:24,&quot;attr&quot;:{&quot;style&quot;:{&quot;color&quot;:&quot;#707070&quot;,&quot;lineStyle&quot;:&quot;solid&quot;,&quot;arrow&quot;:&quot;to&quot;}}},{&quot;ideaIdFrom&quot;:1,&quot;ideaIdTo&quot;:43,&quot;attr&quot;:{&quot;style&quot;:{&quot;color&quot;:&quot;#707070&quot;,&quot;lineStyle&quot;:&quot;solid&quot;,&quot;arrow&quot;:&quot;to&quot;}}}],&quot;attr&quot;:{&quot;storyboards&quot;:[&quot;Storyboard 1&quot;],&quot;previous-atlas-export&quot;:{&quot;publishedTimestamp&quot;:1554726157604,&quot;title&quot;:&quot;CLI_2048&quot;,&quot;description&quot;:&quot;CLI_scrapingHub_featurelist_Vipul Gupta&quot;,&quot;slug&quot;:&quot;cli2048&quot;,&quot;gaClientCode&quot;:false}},&quot;theme&quot;:{&quot;name&quot;:&quot;MindMup Default&quot;,&quot;node&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;cornerRadius&quot;:10,&quot;backgroundColor&quot;:&quot;#E0E0E0&quot;,&quot;border&quot;:{&quot;type&quot;:&quot;surround&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#707070&quot;,&quot;width&quot;:1,&quot;style&quot;:&quot;solid&quot;}},&quot;shadow&quot;:[{&quot;color&quot;:&quot;#070707&quot;,&quot;opacity&quot;:0.4,&quot;offset&quot;:{&quot;width&quot;:2,&quot;height&quot;:2},&quot;radius&quot;:2}],&quot;text&quot;:{&quot;margin&quot;:5,&quot;alignment&quot;:&quot;center&quot;,&quot;maxWidth&quot;:146,&quot;color&quot;:&quot;#4F4F4F&quot;,&quot;lightColor&quot;:&quot;#EEEEEE&quot;,&quot;darkColor&quot;:&quot;#000000&quot;,&quot;font&quot;:{&quot;lineSpacing&quot;:4.5,&quot;lineSpacingPx&quot;:6,&quot;size&quot;:9,&quot;sizePx&quot;:12,&quot;weight&quot;:&quot;bold&quot;}},&quot;connections&quot;:{&quot;default&quot;:{&quot;h&quot;:&quot;center&quot;,&quot;v&quot;:&quot;center&quot;},&quot;from&quot;:{&quot;horizontal&quot;:{&quot;h&quot;:&quot;nearest-inset&quot;,&quot;v&quot;:&quot;center&quot;}},&quot;to&quot;:{&quot;h&quot;:&quot;nearest&quot;,&quot;v&quot;:&quot;center&quot;}},&quot;decorations&quot;:{&quot;height&quot;:20,&quot;edge&quot;:&quot;top&quot;,&quot;overlap&quot;:true,&quot;position&quot;:&quot;end&quot;,&quot;margin&quot;:2,&quot;label&quot;:{&quot;border&quot;:1,&quot;cornerRadius&quot;:11,&quot;margin&quot;:2,&quot;font&quot;:{&quot;lineSpacing&quot;:0,&quot;lineSpacingPx&quot;:0,&quot;size&quot;:9,&quot;sizePx&quot;:12,&quot;weight&quot;:&quot;bold&quot;}},&quot;cornerRadius&quot;:12,&quot;backgroundColor&quot;:&quot;#22aae0&quot;,&quot;opacity&quot;:0.8,&quot;color&quot;:&quot;#ffffff&quot;}},{&quot;name&quot;:&quot;level_1&quot;,&quot;backgroundColor&quot;:&quot;#22AAE0&quot;},{&quot;name&quot;:&quot;activated&quot;,&quot;border&quot;:{&quot;type&quot;:&quot;surround&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#22AAE0&quot;,&quot;width&quot;:3,&quot;style&quot;:&quot;dotted&quot;}}},{&quot;name&quot;:&quot;level_1.activated&quot;,&quot;border&quot;:{&quot;type&quot;:&quot;surround&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#EEEEEE&quot;,&quot;width&quot;:3,&quot;style&quot;:&quot;dotted&quot;}}},{&quot;name&quot;:&quot;selected&quot;,&quot;shadow&quot;:[{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0.9,&quot;offset&quot;:{&quot;width&quot;:2,&quot;height&quot;:2},&quot;radius&quot;:2}]},{&quot;name&quot;:&quot;collapsed&quot;,&quot;shadow&quot;:[{&quot;color&quot;:&quot;#888888&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:1},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:3},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#888888&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:4},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:6},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#888888&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:7},&quot;radius&quot;:0}]},{&quot;name&quot;:&quot;collapsed.selected&quot;,&quot;shadow&quot;:[{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:1},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#888888&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:3},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:6},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#555555&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:7},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:10},&quot;radius&quot;:0},{&quot;color&quot;:&quot;#333333&quot;,&quot;offset&quot;:{&quot;width&quot;:0,&quot;height&quot;:11},&quot;radius&quot;:0}]}],&quot;connector&quot;:{&quot;default&quot;:{&quot;type&quot;:&quot;quadratic&quot;,&quot;controlPoint&quot;:{&quot;above&quot;:{&quot;width&quot;:0,&quot;height&quot;:0.75},&quot;below&quot;:{&quot;width&quot;:0,&quot;height&quot;:0.75},&quot;horizontal&quot;:{&quot;width&quot;:0,&quot;height&quot;:0}},&quot;label&quot;:{&quot;position&quot;:{&quot;ratio&quot;:0.5},&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderColor&quot;:&quot;transparent&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#4F4F4F&quot;,&quot;font&quot;:{&quot;size&quot;:9,&quot;sizePx&quot;:12,&quot;weight&quot;:&quot;normal&quot;}}},&quot;line&quot;:{&quot;color&quot;:&quot;#707070&quot;,&quot;width&quot;:1}}},&quot;link&quot;:{&quot;default&quot;:{&quot;line&quot;:{&quot;color&quot;:&quot;red&quot;,&quot;lineStyle&quot;:&quot;dashed&quot;,&quot;width&quot;:1},&quot;label&quot;:{&quot;position&quot;:{&quot;ratio&quot;:0.5},&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#FFFFFF&quot;,&quot;text&quot;:{&quot;color&quot;:&quot;#4F4F4F&quot;,&quot;font&quot;:{&quot;size&quot;:9,&quot;sizePx&quot;:12,&quot;weight&quot;:&quot;normal&quot;}}}}}},&quot;labels&quot;:{},&quot;export&quot;:{&quot;title&quot;:&quot;CLI_2048&quot;,&quot;description&quot;:&quot;CLI_scrapingHub_featurelist_Vipul Gupta&quot;,&quot;slug&quot;:&quot;cli2048&quot;,&quot;gaClientCode&quot;:false}}
+</script>
+<script src="./CLI_2048_files/mapjs.js"></script>
+<script>
+	window.onload = function () {
+		'use strict';
+		try {
+			mmStart();
+		} catch (e) {
+			console.log(e);
+			window.maploader.classList.add('hidden');
+		}
+	};
+</script>
+
+	<p>Created using <a href="https://www.mindmup.com/">MindMup.com</a></p>
+
+	
+
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span><div><div class="gr_-editor gr-iframe-first-load" style="display: none;"><div class="gr_-editor_back"></div><iframe class="gr_-ifr gr-_dialog-content" src="./CLI_2048_files/saved_resource.html"></iframe></div></div><grammarly-card><div></div></grammarly-card></html>

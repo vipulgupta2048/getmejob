@@ -1,0 +1,15 @@
+STEPS for testing 
+
+Step 1 - Make changes to Spidermon 
+Step 2 - Build the package by recompiling Spidermon again correctly through this command. 
+
+python setup.py sdist bdist_dumb
+
+When built, shift it to Spider-tutorial for testing 
+
+Step 3 - Activate virtualenv
+Step 4 - Install the new Spidermon, pip install package_name
+
+It should now go on to be installed without a hitch. 
+
+Step 5 : TEST 
