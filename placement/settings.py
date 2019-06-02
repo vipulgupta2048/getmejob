@@ -58,15 +58,33 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+EXTENSIONS = {
+    'spidermon.contrib.scrapy.extensions.Spidermon': 500,
+}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#     'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 800,
+SPIDERMON_ENABLED = True
+
+ITEM_PIPELINES = {
+    'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 800,
+}
+
+SPIDERMON_VALIDATION_CERBERUS = ['/home/vipulgupta2048/placement/placement/schema.json']
+
+# SPIDERMON_VALIDATION_SCHEMAS = {
+#     '/home/vipulgupta2048/placement/placement/jsonx.schema'
 # }
+
+# SPIDERMON_VALIDATION_MODELS = (
+#     'placement.validators.Product',
+# )
+
+# SPIDERMON_SPIDER_CLOSE_MONITORS = (
+#     'placement.monitors.SpiderCloseMonitorSuite',
+# )
+
+# SPIDERMON_VALIDATION_ADD_ERRORS_TO_ITEMS = True
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
