@@ -7,6 +7,7 @@
 
 import scrapy
 
+
 class Product(scrapy.Item):
     link = scrapy.Field()
     name = scrapy.Field()
